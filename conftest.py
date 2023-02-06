@@ -29,7 +29,7 @@ def pytest_html_results_table_row(report, cells):
 
 
 # @pytest.mark.hookwrapper
-@pytest.mark.hookwrapper(hookwrapper=True)
+@pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item):
     """
     用于向测试用例中添加用例的开始时间、内部注释，和失败截图等.
