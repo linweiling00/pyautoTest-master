@@ -28,6 +28,7 @@ def pytest_html_results_table_row(report, cells):
     cells.pop()
 
 
+# @pytest.mark.hookwrapper
 @pytest.mark.hookwrapper(hookwrapper=True)
 def pytest_runtest_makereport(item):
     """
